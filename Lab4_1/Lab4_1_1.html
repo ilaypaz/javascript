@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lab4_1_1</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #griddiv {
+            display: grid;
+            margin: auto;
+            width: 50%;
+            height: 500px;
+            grid-template-columns: auto auto;
+        }
+
+        div div {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lab4_1</h1>
+    <p>You will use event handling to make the following grid interactive.</p>
+    <div id="griddiv">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <div id="div4"></div>
+    </div>
+</body>
+<script>
+    //Get the elements
+    let b1 = document.getElementById('div1');//MAKING THE element by ID match the contents within the body above
+    let b2 = document.getElementById('div2');
+    let b3 = document.getElementById('div3');
+    let b4 = document.getElementById('div4');
+
+    //Use traditional event handler to register the event
+
+    b1.onclick = changeColor1
+    b2.onclick = changeColor2;
+    b3.onclick = changeColor3;
+    b4.onclick = changeColor4;
+
+
+    b1.onmouseover = makeGreen1;
+    b2.onmouseover = makeGreen2;
+    b3.onmouseover = makeGreen3;
+    b4.onmouseover = makeGreen4;
+
+
+
+    //Make functions, each function is to respond to a specific event from a certain element.
+    function changeColor1() {
+        div1.style.backgroundColor = 'blue';
+    }
+    function changeColor2() {
+        div2.style.backgroundColor = 'blue';
+    }
+    function changeColor3() {
+        div3.style.backgroundColor = 'blue';
+    }
+    function changeColor4() {
+        div4.style.backgroundColor = 'blue';
+    }
+
+    function makeGreen1() {
+        div1.style.backgroundColor = 'green';
+    }
+    
+    function makeGreen2() {
+        div2.style.backgroundColor = 'green';
+    }
+    
+    function makeGreen3() {
+        div3.style.backgroundColor = 'green';
+    }
+    
+    function makeGreen4() {
+        div4.style.backgroundColor = 'green';
+    }
+
+</script>
+
+</html>

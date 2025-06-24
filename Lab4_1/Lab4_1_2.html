@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lab4_1</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #griddiv {
+            display: grid;
+            margin: auto;
+            width: 50%;
+            height: 500px;
+            grid-template-columns: auto auto;
+        }
+
+        div div {
+            border: 1px solid black;
+        }
+    </style>
+    <script src="lab4_1_2.js" defer></script>
+</head>
+
+<body>
+    <h1>Lab4_1</h1>
+    <p>You will use event handling to make the following grid interactive.</p>
+    <div id="griddiv">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <div id="div4"></div>
+    </div>
+</body>
+<script>
+    let b1 = document.getElementById('div1');//MAKING THE element by ID match the contents within the body above
+    let b2 = document.getElementById('div2');
+    let b3 = document.getElementById('div3');
+    let b4 = document.getElementById('div4');
+
+    b1.addEventListener('click', makeBlue);//creates event object
+    b2.addEventListener('click', makeBlue);
+    b3.addEventListener('click', makeBlue);
+    b4.addEventListener('click', makeBlue);
+    b1.addEventListener('mouseover', makeGreen);
+    b2.addEventListener('mouseover', makeGreen);
+    b3.addEventListener('mouseover', makeGreen);
+    b4.addEventListener('mouseover', makeGreen);
+
+    function makeBlue(e){//e is the event object henceforth it needs to be opassed into the method
+        console.log(e);
+        e.target.style.backgroundColor = 'blue';//target is basically is this from Java
+    }
+    function makeGreen(e){
+        e.target.style.backgroundColor = 'green';//target is basically is this from Java
+    }
+
+
+
+</script>
+
+</html>
